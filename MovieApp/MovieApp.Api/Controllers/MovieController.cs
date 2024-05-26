@@ -87,7 +87,7 @@ namespace MovieApp.Api.Controllers
 
         [HttpGet("Get-Search-History")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ApiResponse<List<string>>))]
-        public async Task<IActionResult> GetSearchHistory()
+        public IActionResult GetSearchHistory()
         {
             var result = _omdbService.GetSearchHistory();
             _logger.LogInformation("Returning search history at time: {time}", DateTime.UtcNow);
