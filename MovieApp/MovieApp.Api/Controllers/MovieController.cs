@@ -21,7 +21,7 @@ namespace MovieApp.Api.Controllers
             _omdbService = omdbService;
         }
 
-        [HttpGet("/movie/search")]
+        [HttpGet("Search")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ApiResponse<OmdbApiResponse>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ApiResponse))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ApiResponse))]
@@ -53,7 +53,7 @@ namespace MovieApp.Api.Controllers
             }
         }
 
-        [HttpGet("/movie/{imdbId}")]
+        [HttpGet("{imdbId}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ApiResponse<OmdbMovieDetailsResponse>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ApiResponse))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ApiResponse))]
@@ -85,7 +85,7 @@ namespace MovieApp.Api.Controllers
 
         }
 
-        [HttpGet("get-search-history")]
+        [HttpGet("Get-Search-History")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ApiResponse<List<string>>))]
         public async Task<IActionResult> GetSearchHistory()
         {

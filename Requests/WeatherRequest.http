@@ -1,5 +1,0 @@
-@root = "http://localhost:5010/api-v1"
-Content-Type: application/json
-
-
-//Get (root/)

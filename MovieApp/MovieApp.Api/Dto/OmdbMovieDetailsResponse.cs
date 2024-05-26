@@ -3,7 +3,7 @@
     public class OmdbMovieDetailsResponse
     {
         public string Title { get; set; }
-        public int Year { get; set; }
+        public string Year { get; set; }
         public string Rated { get; set; }
         public string Released { get; set; }
         public string Runtime { get; set; }
@@ -25,6 +25,7 @@
         public string Production { get; set; }
         public string Website { get; set; }
         public string Response { get; set; }
+        public string? TotalSeasons { get; set; }
 
     }
 
